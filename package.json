@@ -1,0 +1,24 @@
+{
+  "name": "restoapps",
+  "version": "1.0.0",
+  "description": "CRUD : USER, MENU, RESTAURANT, USER_RATING  MVP : RATINGNYA AVERAGE, APABILA RATINGNYA DIBAWAH STANDAR, EMAIL KE RESTAURANTNYA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heraldoyp/RestoApps.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heraldoyp/RestoApps/issues"
+  },
+  "homepage": "https://github.com/heraldoyp/RestoApps#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "pg": "^6.4.2",
+    "sequelize": "^4.26.0"
+  }
+}
