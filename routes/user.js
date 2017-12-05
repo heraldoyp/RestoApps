@@ -3,9 +3,9 @@ const router = express();
 const models = require('../models');
 
 //apus
-// const bodyParser = require('body-parser');
-// router.use(bodyParser.urlencoded({extended: false}));
-// router.use(bodyParser.json());
+const bodyParser = require('body-parser');
+router.use(bodyParser.urlencoded({extended: false}));
+router.use(bodyParser.json());
 router.set('views', './views');
 router.set('view engine', 'ejs');
 
