@@ -5,6 +5,19 @@
     <title>User</title>
   </head>
   <body>
-    <h3>Halaman User</h3>
+    <table border="1">
+      <tr>
+        <th>Id</th>
+        <th>Username</th>
+        <th>Password</th>
+      </tr>
+        <% users.forEach(list=>{ %>
+      <tr>
+          <td><%= list.id %></td>
+          <td><%= list.username %></td>
+          <td><%= list.password %></td>
+      </tr>  
+        <% }) %>
+    </table>
   </body>
 </html>
