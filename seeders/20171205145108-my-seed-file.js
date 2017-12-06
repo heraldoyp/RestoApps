@@ -22,7 +22,7 @@ module.exports = {
     //   password: "654321",
     //   createdAt: new Date(),
     //   updatedAt: new Date()
-    // }])
+    // }],{})
   },
 
   down: (queryInterface, Sequelize) => {

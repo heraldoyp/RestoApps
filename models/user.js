@@ -5,5 +5,9 @@ module.exports = (sequelize, DataTypes) => {
     password: DataTypes.STRING
   })
 
+  User.associate = (models)=>{
+    User.hasMany(models.user_rating)
+    User.belongsToMany(models.Menu, {through: 'user_rating'})
+  }
   return User;
 };

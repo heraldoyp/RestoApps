@@ -1,14 +1,13 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var user_rating = sequelize.define('user_rating', {
+    UserId: DataTypes.INTEGER,
     MenuId: DataTypes.INTEGER,
-    UserId: DataTypes.INTEGER
-  }, {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-      }
-    }
-  });
+    ratings: DataTypes.INTEGER
+  })
+  user_ratings.associate = (models)=>{
+    user_ratings.belongsTo(models.User)
+  }
+
   return user_rating;
 };
