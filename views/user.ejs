@@ -10,12 +10,27 @@
         <th>Id</th>
         <th>Username</th>
         <th>Password</th>
+        <th>Add</th>
+        <th>Option</th>
       </tr>
         <% users.forEach(list=>{ %>
       <tr>
           <td><%= list.id %></td>
           <td><%= list.username %></td>
           <td><%= list.password %></td>
+          <td>
+            <nav>
+              <a href="/users/add">Add</a>
+            </nav>
+          </td>
+          <td>
+            <nav>
+              <a href="/users/edit/<%= list.id %>">Edit</a>
+            </nav>
+            <nav>
+              <a href="/users/delete/<%= list.id %>">Delete</a>
+            </nav>
+          </td>
       </tr>  
         <% }) %>
     </table>
