@@ -5,7 +5,11 @@ module.exports = (sequelize, DataTypes) => {
     username: DataTypes.STRING,
     password: DataTypes.STRING
   });
-
+  
+   User.associate = (models)=>{
+    User.hasMany(models.user_rating)
+    User.belongsToMany(models.Menu, {through: 'user_rating'})
+  }
 
   User.beforeCreate((user, options) => {
   const saltRounds = 10;
@@ -14,6 +18,6 @@ module.exports = (sequelize, DataTypes) => {
     user.password = hash
   });
 });
-
+ 
   return User;
 };
