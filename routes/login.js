@@ -7,7 +7,6 @@ const bcrypt = require('bcrypt');
   router.get('/', function(req, res){
     res.render('login', {error: false})
   })
-
   router.post('/', function(req, res){
     Model.User.findOne({
       where: {

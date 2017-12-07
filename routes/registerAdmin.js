@@ -4,16 +4,16 @@ const Model = require('../models')
 
 
 router.get('/', function(req, res) {
-    res.render('register')
+    res.render('registerAdmin')
 })
   router.post('/',(req,res)=>{
   let obj = {
     username : req.body.username,
     password : req.body.password
   }
-  Model.User.create(obj)
+  Model.Admin.create(obj)
   .then(()=>{
-    res.redirect('/login')
+    res.redirect('/loginAdmin')
   })
   .catch((err) => {
     console.log(err);
