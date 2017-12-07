@@ -5,26 +5,26 @@ const bcrypt = require('bcrypt');
 
 
   router.get('/', function(req, res){
-    res.render('login', {error: false})
+    res.render('loginAdmin', {error: false})
   })
   router.post('/', function(req, res){
-    Model.User.findOne({
+    Model.Admin.findOne({
       where: {
         username: req.body.username
       }
-    }).then(function(user){
-      if(user){
-        bcrypt.compare(req.body.password, user.password).then(function(result) {
+    }).then(function(admin){
+      if(admin){
+        bcrypt.compare(req.body.password, admin.password).then(function(result) {
           if (result) {
             req.session.loggedIn = true
-            req.session.username = user.username
+            req.session.username = admin.username
             res.redirect('/index')
           } else{
-            res.render('login', {error: true})
+            res.render('loginAdmin', {error: true})
           }
         })
       } else{
-        res.render('login', {error: true})
+        res.render('loginAdmin', {error: true})
       }
     })
   })
