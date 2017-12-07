@@ -1,10 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Menu</title>
   </head>
   <body>
-    <h3>ini daftar menu</h3>
+    <nav>
+      <a href="menus/add">Add Menu</a>
+    </nav>
+    <table border="1">
+    <% menus.forEach(list=>{%>
+      <tr>
+        <td>
+          <%= list.food_name %><br>
+          <%= list.price %><br>
+          <% if(list.RestoId === null) {%>
+            <%= "Unassigned" %><br>
+          <% } else { %>
+            <%= list.Resto.name %><br>
+          <% } %>
+          Rating<br>
+        </td>
+        <td>
+          <nav>
+            <a href="menus/edit/<%= list.id %>">Edit</a>
+          </nav>
+          <nav>
+            <a href="menus/delete/<%= list.id %>">Delete</a>
+          </nav>
+        </td>
+      </tr>
+    <% }) %>
+  </table>
   </body>
 </html>

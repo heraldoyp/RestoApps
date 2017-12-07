@@ -12,17 +12,17 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
-    return queryInterface.bulkInsert('Users', [{
-      username: "heraldoyp",
-      password: "123456",
-      createdAt: new Date(),
-      updatedAt: new Date()
-    },{
-      username: "rezaalfarabi",
-      password: "654321",
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }])
+    // return queryInterface.bulkInsert('Users', [{
+    //   username: "heraldoyp",
+    //   password: "123456",
+    //   createdAt: new Date(),
+    //   updatedAt: new Date()
+    // },{
+    //   username: "rezaalfarabi",
+    //   password: "654321",
+    //   createdAt: new Date(),
+    //   updatedAt: new Date()
+    // }])
   },
 
   down: (queryInterface, Sequelize) => {
@@ -33,5 +33,6 @@ module.exports = {
       Example:
       return queryInterface.bulkDelete('Person', null, {});
     */
+    // return queryInterface.bulkDelete('Users', null, {})
   }
 };
