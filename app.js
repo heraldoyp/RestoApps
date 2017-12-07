@@ -1,3 +1,4 @@
+
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
@@ -30,4 +31,9 @@ app.use('/menus', menu)
 app.use('/loginAdmin', loginAdmin)
 
 
+<<<<<<< HEAD
 app.listen(3000, () => console.log('lanjutttt!!!'))
+=======
+app.listen(3000, () => console.log('lanjutttt!!!!'))
+
+>>>>>>> da252a75acf34aeedc490afb63aea4280b76fe84
