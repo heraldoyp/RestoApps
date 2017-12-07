@@ -4,9 +4,11 @@ module.exports = (sequelize, DataTypes) => {
     UserId: DataTypes.INTEGER,
     MenuId: DataTypes.INTEGER,
     ratings: DataTypes.INTEGER
-  });  
-  user_ratings.associate = (models)=>{
-    user_ratings.belongsTo(models.User)
+  })
+  user_rating.associate = (models)=>{
+    user_rating.belongsTo(models.User)
+    user_rating.belongsTo(models.Menu)
   }
+
   return user_rating;
 };

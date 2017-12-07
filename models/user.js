@@ -22,15 +22,10 @@ module.exports = (sequelize, DataTypes) => {
     },
     password: DataTypes.STRING
   });
-<<<<<<< HEAD
-=======
-  
-   User.associate = (models)=>{
+  User.associate = (models)=>{
     User.hasMany(models.user_rating)
     User.belongsToMany(models.Menu, {through: 'user_rating'})
   }
->>>>>>> da252a75acf34aeedc490afb63aea4280b76fe84
-
   User.beforeCreate((user, options) => {
   const saltRounds = 10;
   const myPlaintextPassword = user.password;
@@ -41,3 +36,4 @@ module.exports = (sequelize, DataTypes) => {
  
   return User;
 };
+

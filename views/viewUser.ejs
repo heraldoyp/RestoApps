@@ -21,25 +21,17 @@
             border:1px white dashed;
             float: left;
         }
-        .Menu {
-            back
-        }
     </style>
 
     <div class="wrapper">
-        <h3>RESTO APPS</h3>
-        <% data.forEach(Restolist=>{ %>
-          <div class="resto">
-            <h4><%=Restolist.name%></h4>
-            <% Restolist.Menus.forEach(MenuList=>{ %>
-              <div class="Menu">
-                <%= MenuList.food_name %><br>
-                <%= MenuList.price %><br>
-                "Rating"
-              </div>
-            <% }) %>
-          </div>
-        <% }) %>
+        <p>Kepala</p>
+        <div class="resto"><p>1</p></div>
+        <div class="resto"><p>2</p></div>
+        <div class="resto"><p>3</p></div>
+        <div class="resto"><p>4</p></div>
+        <div class="resto"><p>5</p></div>
+        <div class="resto"><p>6</p></div>
+    
     </div>
 </body>
 </html>

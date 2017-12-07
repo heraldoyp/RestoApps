@@ -1,4 +1,3 @@
-
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
@@ -22,7 +21,6 @@ app.use(bodyParser.json())
 app.set('views', './views')
 app.set('view engine', 'ejs')
 
-
 app.use('/login',login)
 app.use('/register',register)
 app.use('/registerAdmin',registerAdmin)
@@ -31,9 +29,5 @@ app.use('/menus', menu)
 app.use('/loginAdmin', loginAdmin)
 
 
-<<<<<<< HEAD
-app.listen(3000, () => console.log('lanjutttt!!!'))
-=======
-app.listen(3000, () => console.log('lanjutttt!!!!'))
 
->>>>>>> da252a75acf34aeedc490afb63aea4280b76fe84
+app.listen(3000, () => console.log('lanjutttt!!!'))
